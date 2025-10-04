@@ -13,6 +13,7 @@ NOTE: This is for Godot 4. If you are using Godot 3 then have a look at the [v1.
 - Pooled audio players
 - Handles music crossfades
 - Autodetect probable audio buses for both sounds and music
+- Easily add sound effects based on signals
 - Splits sounds up into UI sounds and local sounds
 - Supports both GDScript and C#
 
@@ -28,6 +29,7 @@ Enable `SoundManager` in project plugins.
 - [Ambient sounds](docs/AmbientSounds.md)
 - [Music](docs/Music.md)
 - [C#](docs/CSharp.md)
+- [SignalSounds](docs/SignalSounds.md)
 
 ## Contributors
 

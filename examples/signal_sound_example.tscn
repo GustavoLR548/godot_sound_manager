@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://lp0liin8aowr"]
+
+[ext_resource type="PackedScene" uid="uid://8eckvgu8pt3m" path="res://addons/sound_manager/signal_sound_event/signal_sound/SignalSound.tscn" id="1_7fm8v"]
+[ext_resource type="AudioStream" uid="uid://0ijba4nv63eo" path="res://examples/sound.wav" id="2_gi1x7"]
+[ext_resource type="PackedScene" uid="uid://cx6qv55jd2uel" path="res://addons/sound_manager/signal_sound_event/multi_signal_sound/MultiSignalSound.tscn" id="3_gi1x7"]
+
+[node name="SignalSoundExample" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SignalSoundTester" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Play sound"
+
+[node name="SignalSound" parent="Buttons/SignalSoundTester" instance=ExtResource("1_7fm8v")]
+signal_name = "pressed"
+sound_effect = ExtResource("2_gi1x7")
+
+[node name="MultiSignalSoundTester" type="OptionButton" parent="Buttons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Option1"
+popup/item_0/id = 0
+popup/item_1/text = "Option2"
+popup/item_1/id = 1
+popup/item_2/text = "Option3"
+popup/item_2/id = 2
+
+[node name="MultiSignalSound" parent="Buttons/MultiSignalSoundTester" instance=ExtResource("3_gi1x7")]
+signal_names = Array[String](["item_selected", "pressed"])
+sound_effect = ExtResource("2_gi1x7")

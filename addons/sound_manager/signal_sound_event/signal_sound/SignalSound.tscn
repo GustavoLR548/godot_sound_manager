@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8eckvgu8pt3m"]
+
+[ext_resource type="Script" uid="uid://81eiere8okox" path="res://addons/sound_manager/signal_sound_event/signal_sound/signal_sound.gd" id="1_p38bj"]
+
+[node name="SignalSound" type="Node"]
+script = ExtResource("1_p38bj")
+override_bus = "Sounds"
